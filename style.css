@@ -21,7 +21,7 @@ body {
 }
 
 #frontimg {
-  background-image: url(coinimg.webp);
+  background-image: url(coinimg.jpg);
   background-size: cover;
   width: 100%;
   background-attachment: fixed;
@@ -505,14 +505,7 @@ p {
     height: 25px;
     margin-right: 5px;
   }
+  #frontimg{
+  background-attachment: scroll;
+  }
 }
-
-
-
-
-
-
-
-
-
-
