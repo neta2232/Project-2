@@ -30,6 +30,7 @@ body {
   background-position: center;
   color: var(--color);
   text-align: center;
+  background-color: #daedf4; 
 }
 
 #coinscontainer {
@@ -504,6 +505,10 @@ p {
     padding: 2px 8px;
     height: 25px;
     margin-right: 5px;
+  }
+    #frontimg {
+    background-image: url(coinimg-small.webp);
+    background-attachment: scroll;
   }
 }
 
