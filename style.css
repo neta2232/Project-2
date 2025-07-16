@@ -1,0 +1,518 @@
+h1 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 50px;
+  color: #19407bc7;
+}
+
+body {
+  background-color: #daedf4 !important;
+}
+
+#maintitle {
+  font-size: 55px;
+  color: #90caf9;
+  color: white;
+  -webkit-text-stroke: 1.5px #0d47a1;
+  margin-top: 25px;
+  margin-left: 35px;
+}
+
+#frontimg {
+  background-image: url(coinimg.jpg);
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+  height: 450px;
+  display: flex;
+  background-position: center;
+  color: var(--color);
+  text-align: center;
+}
+
+#coinscontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 0px;
+  justify-items: center;
+  padding-bottom: 60px;
+  padding-top: 20px;
+  ;
+
+}
+
+.switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  width: 60px;
+  height: 34px;
+  z-index: 2;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.card-body {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#alertmessage {
+  display: block;
+  background-color: #add3f2;
+  border: 4px solid #1976d2;
+  border-radius: 12px;
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  padding: 24px 32px 20px 32px;
+  text-align: center;
+  width: 90vw;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  z-index: 9999;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+#selected-coins-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin: 18px 0 12px 0;
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+#alertmessage button {
+  display: 'none';
+
+}
+
+#alertTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+}
+
+#alertsubTitle {
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 25px;
+
+}
+
+#alertmessage h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#coinselected {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  font-size: small;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+p {
+  text-align: center;
+  padding: 20px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.card {
+  background-color: #f0f8ff;
+  border: 1px solid #90caf9;
+  box-shadow: 0 4px 8px rgba(0, 100, 200, 0.2);
+  transition: transform 0.3s;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 28px;
+  padding: 5px
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 100, 200, 0.3);
+}
+
+.card-body h4,
+.card-body h5 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.coin-info {
+  margin-top: 15px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  color: #01579b;
+  padding: 15px;
+
+}
+
+.btn-primary {
+  background-color: #1976d2;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+}
+
+.progress-bar {
+  background-color: #42a5f5;
+  color: white;
+  font-weight: bold;
+}
+
+.moreInfoBtn {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #19407bc7;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 7px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.coinName {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.symbolName {
+  margin-top: -0.5px;
+  font-size: 18px;
+
+}
+
+.coinImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  margin-bottom: 10px;
+
+}
+
+.pricetitles {
+  font-size: large;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.moreInfoBtn span {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.myprogress {
+  background-color: #0d47a1
+}
+
+.mynav {
+  background-image: linear-gradient(to right, #0d47a1, #1976d2, #90caf9, #ede4ae);
+  background-size: cover;
+  color: #0d47a1;
+  padding: 12px 24px;
+  border-bottom: 2px solid #19407bc7;
+  box-shadow: 0 4px 8px rgba(13, 71, 161, 0.3);
+}
+
+.menutags {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  margin-right: 15px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+
+}
+
+.tagsdiv {
+  margin-left: 25px;
+}
+
+#formid {
+  margin-right: 65px;
+}
+
+#searchinput {
+  width: 210px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #0d47a1;
+  margin-right: 5px;
+  margin-top: 2px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 32px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  color: #1976d2;
+
+}
+
+#searchbtn {
+  height: 30px;
+  position: relative;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 4px 12px;
+  left: 24px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  border: 1px solid #01579b;
+  top: 3px;
+
+}
+
+#searchbtn:hover {
+  background-color: #0d47a1;
+}
+
+#searchinput::placeholder {
+  color: #0d47a1;
+  opacity: 0.7;
+}
+
+#cancelalertbtn {
+  width: 65px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #19407bc7;
+  color: white;
+  display: flex;
+  padding: 7px;
+  display: inline;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#closealertbtn {
+  display: inline;
+  width: 65px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #19407bc7;
+  color: white;
+  display: flex;
+  padding: 7px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#alertbtn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+#about-page {
+  background-color: #daedf4;
+  padding-bottom: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 20px;
+
+}
+
+#real-time-report {
+  background-color: #daedf4 !important;
+  margin: 0;
+
+}
+
+.aboutTitle {
+  font-family: 'Orbitron', sans-serif;
+  color: #08295a;
+
+}
+
+.aboutcontent {
+  font-size: 18px;
+  color: #08295a;
+
+}
+
+#choosemorecoins {
+  color: #08295a;
+  font-size: 40px;
+  padding-bottom: 200px;
+}
+
+.center-results {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.custom-alert-box {
+  color: #01579b;
+  font-size: 30px;
+  margin-top: 10px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#no-coins-alert {
+  margin-top: 70px;
+}
+
+#loadingbar {
+  width: 55%;
+}
+
+@media screen and (max-width: 768px) {
+  #about-page {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+  }
+
+  .aboutTitle {
+    font-size: 20px;
+  }
+
+  .aboutcontent {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  #chartContainer {
+    height: 280px;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .canvasjs-chart-title {
+    font-size: 16px !important;
+  }
+
+  .canvasjs-chart-toolbar {
+    display: none;
+  }
+  #formid {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    z-index: 1000;
+  }
+
+  #searchinput {
+    width: 100px;
+    height: 25px;
+    margin-right: -10px;
+    font-size: 12px;
+  }
+
+  #searchinput::placeholder {
+    font-size: 9px;
+  }
+
+  #searchbtn {
+    font-size: 12px;
+    padding: 2px 8px;
+    height: 25px;
+    margin-right: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
