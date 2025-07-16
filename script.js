@@ -291,7 +291,7 @@ function renderSelected(tempArr, allCoins, coinselectedDiv, onRemove) {
         const coinObj = allCoins.find(c => c.id === id);
         if (!coinObj) return;
         const card2 = document.createElement("div");
-        card2.className = "card w-50";
+        card2.className = "card alert-card";
         card2.innerHTML = `
             <div class="card-body">
                 <h5>${coinObj.symbol}</h5>
