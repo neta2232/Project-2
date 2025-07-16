@@ -141,9 +141,9 @@ input:checked+.slider:before {
   overflow-y: auto;
 }
 
-#alertmessage button {
-  display: 'none';
-
+.alert-card {
+  width: 90% !important;
+  max-width: 280px !important;
 }
 
 #alertTitle {
@@ -507,5 +507,15 @@ p {
   }
   #frontimg{
   background-attachment: scroll;
+  }
+  .alert-card {
+    width: 90% !important;
+    max-width: 280px !important;
+  }
+  #coinselected {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 }
