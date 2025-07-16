@@ -21,7 +21,7 @@ body {
 }
 
 #frontimg {
-  background-image: url(coinimg.jpg);
+  background-image: url(coinimg.webp);
   background-size: cover;
   width: 100%;
   background-attachment: fixed;
