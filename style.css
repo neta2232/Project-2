@@ -24,7 +24,7 @@ body {
   background-image: url(coinimg.jpg);
   background-size: cover;
   width: 100%;
-  background-attachment: fixed;
+  background-attachment: scroll;
   height: 450px;
   display: flex;
   background-position: center;
